@@ -58,7 +58,7 @@ int main() {
         celciusToFahrenheit = ((9.0/5.0)*userinputC + 32);
         printf("Fahrenheit: %d",celciusToFahrenheit);
       }
-      else if (tempChoice == 3){
+      else if (tempChoice == 3){ //added a celsius to kelvin feature
         printf("Please enter the Celcius degree: \n");
         scanf("%d",&userinputC);
         celciusToKelvin = ((9.0/5.0)*userinputC + 32);
@@ -96,7 +96,7 @@ int main() {
         USDtoRMB = userinputUSDtoRMB * 6.82;
         printf("RMB: %.2f",USDtoRMB);
       }
-      else if(currencyChoice == 4) {
+      else if(currencyChoice == 4) { //added a usd to pesos feature
         printf("Please enter the USD amount: \n");
         scanf("%d",&userinputUSDtoPESOS);
         USDtoPESOS = userinputUSDtoPESOS * 17.26;
@@ -125,7 +125,7 @@ int main() {
           gramsToPounds = userinputGram * 0.00220462;
           printf("Pounds: %.2f",gramsToPounds);
       }
-      else if(massChoice == 3) {
+      else if(massChoice == 3) { //added a ounce to grams feature
           printf("Please enter the ounce amount: \n");
           scanf("%d",&userinputOunce);
           ounceToGram = userinputOunce * 0.00220462;
