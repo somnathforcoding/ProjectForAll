@@ -19,14 +19,18 @@ int main() {
   int userinputUSDtoEuro; // User inputted for USD to EURO;
   int userinputUSDtoJPY; // User inputted for USD to JPY;
   int userinputUSDtoRMB; // User inputted for USD to RMB;
+  int userinputUSDtoPESOS; // User inputted for USD to RMB;
   int userinputOunce; // User inputted for Ounce;
   int userinputGram; // User inputted for Gram;
   int fahrenheitToCelcius; // variable that stores the converted F->C;
   int celciusToFahrenheit; // variable that stores the converted C->F;
+  int celciusToKelvin; // variable that stores the converted C->F;
   float USDtoEURO ; // varaible that stores the converted USD->EURO;
   float USDtoJPY; // stores the converted USD->JPY;
   float USDtoRMB; // stores the converted USD->RMB;
+  float USDtoPESOS; // stores the converted USD->RMB;
   float ounceToPounds; // stores the converted Ounce->Pounds;
+  float ounceToGram; // stores the converted Ounce->Pounds;
   float gramsToPounds; // stores the vonerted Grams->Pounds;
 
   printf("Welcome to Unit Converter! \n");
@@ -40,6 +44,7 @@ int main() {
       printf("Here is a list of conversations to choose from: \n");
       printf("Enter 1 for Fahrenheit to Celsius. \n");
       printf("Enter 2 for Celsius to Fahrenheit. \n");
+      printf("Enter 3 for Celsius to Kelvin. \n");
       scanf("%d",&tempChoice);
       if(tempChoice == 1){
           printf("Please enter the Fahrenheit degree: \n");
@@ -53,8 +58,16 @@ int main() {
         celciusToFahrenheit = ((9.0/5.0)*userinputC + 32);
         printf("Fahrenheit: %d",celciusToFahrenheit);
       }
-      else
+      else if (tempChoice == 3){
+        printf("Please enter the Celcius degree: \n");
+        scanf("%d",&userinputC);
+        celciusToKelvin = ((9.0/5.0)*userinputC + 32);
+        printf("Fahrenheit: %d",celciusToKelvin + 273);
+      }
+      else {
         printf("Please enter the correct choice. \n");
+      }
+        
   }
 
   else if(category == 'C') {
@@ -63,6 +76,7 @@ int main() {
       printf("Enter 1 for USD to Euro. \n");
       printf("Enter 2 for USD to JPY. \n");
       printf("Enter 3 for USD to RMB. \n");
+      printf("Enter 4 for USD to PESOS. \n");
       scanf("%d",&currencyChoice);
       if(currencyChoice == 1){
           printf("Please enter the USD amount: \n");
@@ -82,14 +96,22 @@ int main() {
         USDtoRMB = userinputUSDtoRMB * 6.82;
         printf("RMB: %.2f",USDtoRMB);
       }
-      else
+      else if(currencyChoice == 4) {
+        printf("Please enter the USD amount: \n");
+        scanf("%d",&userinputUSDtoPESOS);
+        USDtoPESOS = userinputUSDtoPESOS * 17.26;
+        printf("RMB: %.2f",USDtoPESOS);
+      }
+      else {
         printf("Please enter correct choice. \n");
+      }
    }
   else if(category == 'M'){
       printf("Welcome to Mass Converter! \n");
       printf("Here is a list of conversations to choose from: \n");
       printf("Enter 1 for ounces to pounds. \n");
       printf("Enter 2 for gram to pounds. \n");
+      printf("Enter 2 for ounce to grams. \n");
       scanf("%d",&massChoice);
       if(massChoice == 1){
           printf("Please enter the ounce amount: \n");
@@ -103,8 +125,15 @@ int main() {
           gramsToPounds = userinputGram * 0.00220462;
           printf("Pounds: %.2f",gramsToPounds);
       }
-      else
+      else if(massChoice == 3) {
+          printf("Please enter the ounce amount: \n");
+          scanf("%d",&userinputOunce);
+          ounceToGram = userinputOunce * 0.00220462;
+          printf("Pounds: %.2f", ounceToGram);
+      }
+      else {
         printf("Please enter the correct choice. \n");
+      }
    }
   return 0;
 }
