@@ -19,18 +19,18 @@ int main() {
   int userinputUSDtoEuro; // User inputted for USD to EURO;
   int userinputUSDtoJPY; // User inputted for USD to JPY;
   int userinputUSDtoRMB; // User inputted for USD to RMB;
-  int userinputUSDtoPESOS; // User inputted for USD to RMB;
+  int userinputUSDtoPESOS; // User inputted for USD to PESOS;
   int userinputOunce; // User inputted for Ounce;
   int userinputGram; // User inputted for Gram;
   int fahrenheitToCelcius; // variable that stores the converted F->C;
   int celciusToFahrenheit; // variable that stores the converted C->F;
-  int celciusToKelvin; // variable that stores the converted C->F;
+  int celciusToKelvin; // variable that stores the converted C->K;
   float USDtoEURO ; // varaible that stores the converted USD->EURO;
   float USDtoJPY; // stores the converted USD->JPY;
   float USDtoRMB; // stores the converted USD->RMB;
   float USDtoPESOS; // stores the converted USD->RMB;
   float ounceToPounds; // stores the converted Ounce->Pounds;
-  float ounceToGram; // stores the converted Ounce->Pounds;
+  float ounceToGram; // stores the converted Ounce->Gram;
   float gramsToPounds; // stores the vonerted Grams->Pounds;
 
   printf("Welcome to Unit Converter! \n");
@@ -128,7 +128,7 @@ int main() {
       else if(massChoice == 3) { //added a ounce to grams feature
           printf("Please enter the ounce amount: \n");
           scanf("%d",&userinputOunce);
-          ounceToGram = userinputOunce * 0.00220462;
+          ounceToGram = userinputOunce * 28.34;
           printf("Pounds: %.2f", ounceToGram);
       }
       else {
